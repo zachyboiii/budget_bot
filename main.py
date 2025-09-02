@@ -289,6 +289,8 @@ async def unknown_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ------------------- Main -------------------
 def main():
+    print(TOKEN)
+    print(MONGO_URI)
     app = Application.builder().token(TOKEN).build()
     print("Bot started...")
     try:
