@@ -17,7 +17,8 @@ from telegram.ext import (
 )
 
 # ------------------- Setup -------------------
-load_dotenv()
+if os.path.exists(".env"):
+    load_dotenv()  # only load locally
 
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 MONGO_URI = os.getenv("MONGO_URI")
