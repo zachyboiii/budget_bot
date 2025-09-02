@@ -127,7 +127,7 @@ async def add_expense(update: Update, context: ContextTypes.DEFAULT_TYPE):
         amount = float(amount_str)
     except Exception:
         await update.message.reply_text(
-            "Usage: /add <amount>, <name>, <category>\nExample: /add 12.50, Lunch at Macs, Food"
+            "Usage: /add <amount>, <name>, <category>\nExample: /add 12.50, Lunch at, Food"
         )
         return
 
