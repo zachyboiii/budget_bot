@@ -23,7 +23,11 @@ if os.path.exists(".env"):
 TOKEN = os.getenv("TELEGRAM_TOKEN")
 MONGO_URI = os.getenv("MONGO_URI")
 
-client = MongoClient(MONGO_URI)
+client = MongoClient(
+    MONGO_URI,
+    tls=True,
+    tlsAllowInvalidCertificates=False
+)
 db = client["budgetbot"]
 users = db["users"]
 budgets = db["budgets"]
